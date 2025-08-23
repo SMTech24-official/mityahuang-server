@@ -18,3 +18,18 @@ model ExchangeRate {
 
   @@map("exchange-rate")
 }
+
+model WhatsappContact {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  imageUrl    String
+
+  @@map("whatsapp-contact")
+}
+
+model SocialMedia {
+  id     String            @id @default(auto()) @map("_id") @db.ObjectId
+  link   String
+  status SocialMediaStatus
+}

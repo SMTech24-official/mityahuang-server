@@ -9,7 +9,8 @@ export type T_ASSETS_UPLOAD_FOLDER_NAME =
   | "place-images"
   | "place/media"
   | "place/items"
-  | "careers";
+  | "careers"
+  | "whatsapp-contact-image";
 
 export const allowedTypes = [
   "image/jpeg",

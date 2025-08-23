@@ -1,0 +1,18 @@
+model ContactUs {
+    id          String          @id @default(auto()) @map("_id") @db.ObjectId
+    fullName    String
+    email       String
+    phoneNumber String
+    orderId     String
+    message     String
+    status      ContactUsStatus @default(Unread)
+    cratedAt    DateTime        @default(now())
+
+    @@map("contact-us")
+}
+
+enum ContactUsStatus {
+    Read
+    Replied
+    Unread
+}

@@ -28,3 +28,13 @@ enum OauthMethod {
     FACEBOOK
     APPLE
 }
+
+enum PromotionLevelStatus {
+    Normal
+    Hidden
+}
+
+enum SocialMediaStatus {
+    Normal
+    Hidden
+}

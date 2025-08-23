@@ -1,0 +1,11 @@
+model PromotionLevel {
+    id                  String               @id @default(auto()) @map("_id") @db.ObjectId
+    promotionLevelTips  String
+    experienceThreshold Int
+    commissionRateTips  Int
+    status              PromotionLevelStatus
+
+    createdAt DateTime @default(now())
+
+    @@map("promotion-levels")
+}
