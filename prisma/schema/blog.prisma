@@ -1,0 +1,10 @@
+model Blog {
+    id               String    @id @default(auto()) @map("_id") @db.ObjectId
+    blogTitle        String
+    date             DateTime
+    level            BlogLevel
+    blogThumbnailUrl String
+    description      String
+
+    createdAt DateTime @default(now())
+}

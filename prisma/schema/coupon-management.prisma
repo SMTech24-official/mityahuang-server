@@ -1,0 +1,20 @@
+model CouponManagement {
+        id                 String               @id @default(auto()) @map("_id") @db.ObjectId
+        couponName         String
+        promoCode          String
+        couponType         CouponType
+        couponUse          CouponUse
+        fullAmount         Int
+        discount           Int
+        total              Int
+        maximumAmount      Int
+        startingTime       DateTime
+        endingTime         DateTime
+        validityPeriodDays Int
+        status             NormalOrHiddenStatus
+
+        createdAt DateTime @default(now())
+        updatedAt DateTime @updatedAt
+
+        @@map("coupon_management")
+}

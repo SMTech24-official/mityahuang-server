@@ -28,3 +28,45 @@ enum OauthMethod {
     FACEBOOK
     APPLE
 }
+
+enum PromotionLevelStatus {
+    Normal
+    Hidden
+}
+
+enum SocialMediaStatus {
+    Normal
+    Hidden
+}
+
+enum NormalOrHiddenStatus {
+    Normal
+    Hidden
+}
+
+enum BlogLevel {
+    Latest_Activity
+    Recommend
+    FAQ
+}
+
+enum OrderType {
+    Product
+    Parcel
+}
+
+enum TypeOfCharge {
+    Percentage_of_products_amount
+    Fixed_amount_for_each_pcs
+}
+
+enum CouponType {
+    Full_Reduction
+    Discount
+}
+
+enum CouponUse {
+    All
+    Order
+    Waybill
+}

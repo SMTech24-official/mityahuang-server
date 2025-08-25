@@ -1,0 +1,447 @@
+{
+  "info": {
+    "_postman_id": "29132452-27a1-495d-909d-73b5a8e0bb26",
+    "name": "Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47153288",
+    "_collection_link": "https://research-technologist-80210988-5914672.postman.co/workspace/mityahuang-server~39c05f58-08f4-42d7-962a-057b39f4d19a/collection/47153288-29132452-27a1-495d-909d-73b5a8e0bb26?action=share&source=collection_link&creator=47153288"
+  },
+  "item": [
+    {
+      "name": "Contact Us",
+      "item": [
+        {
+          "name": "Get Contact Us",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/contact-us?limit=100&page=1",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "contact-us"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "100"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Contact Us By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/contact-us/68a98ce5c3066e845638b155",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "contact-us", "68a98ce5c3066e845638b155"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create New Contact Us",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fullName\":\"Robin Mia\",\r\n    \"email\":\"robindev2007@gmail.com\",\r\n    \"phoneNumber\":\"01541\",\r\n    \"orderId\":\"2025dsfsdf\",\r\n    \"message\":\"Hi can we talk on whatsapp\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/contact-us",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "contact-us"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search Contact us",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fullName\":\"Robin Mia\",\r\n    \"email\":\"robindev2007@gmail.com\",\r\n    \"phoneNumber\":\"01541\",\r\n    \"orderId\":\"2025dsfsdf\",\r\n    \"message\":\"Hi can we talk on whatsapp\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/contact-us/search?searchQuery=Ca&limit=10&page=1",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "contact-us", "search"],
+              "query": [
+                {
+                  "key": "searchQuery",
+                  "value": "Ca"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update contact us status",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"Replied\" //  Read    Replied    Unread\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/contact-us/68a98ce5c3066e845638b155",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "contact-us", "68a98ce5c3066e845638b155"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete contact us",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"Read\" //  Read    Replied    Unread\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/contact-us/68a98ce5c3066e845638b155",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "contact-us", "68a98ce5c3066e845638b155"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Promotional Levels",
+      "item": [
+        {
+          "name": "Get all promotional levels",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"Read\" //  Read    Replied    Unread\r\n}"
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/promotional-levels?limit=10&page=1",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "promotional-levels"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get promotional level by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"Read\" //  Read    Replied    Unread\r\n}"
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/promotional-levels/68a99ccd75202b24674f3914",
+              "host": ["{{apiUrl}}"],
+              "path": [
+                "api",
+                "v1",
+                "promotional-levels",
+                "68a99ccd75202b24674f3914"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create new promitonal leves",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"promotionLevelTips\":\"Level 1 (dream promoter)\",\r\n    \"experienceThreshold\":100000,\r\n    \"commissionRateTips\":10,\r\n    \"status\":\"Normal\" // Normal, Hidden\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/promotional-levels",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "promotional-levels"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update promotional level",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"promotionLevelTips\":\"Level 1 (dream promoter)\",\r\n    \"experienceThreshold\":100000,\r\n    \"commissionRateTips\":10,\r\n    \"status\":\"Hidden\" // optional Hidden, Normal\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/promotional-levels/68a9af114bcd8c699cc8e42e",
+              "host": ["{{apiUrl}}"],
+              "path": [
+                "api",
+                "v1",
+                "promotional-levels",
+                "68a9af114bcd8c699cc8e42e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete promotional Level",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"promotionLevelTips\":\"Level 1 (dream promoter)\",\r\n    \"experienceThreshold\":100000,\r\n    \"commissionRateTips\":10,\r\n    \"status\":\"Hidden\" // Normal, Hidden\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/promotional-levels/68a99ccd75202b24674f3914",
+              "host": ["{{apiUrl}}"],
+              "path": [
+                "api",
+                "v1",
+                "promotional-levels",
+                "68a99ccd75202b24674f3914"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Whatsapp Contact",
+      "item": [
+        {
+          "name": "Get whatsapp contact",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"promotionLevelTips\":\"Level 1 (dream promoter)\",\r\n    \"experienceThreshold\":100000,\r\n    \"commissionRateTips\":10,\r\n    \"status\":\"Hidden\" // Normal, Hidden\r\n\r\n}"
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/whatsapp-contact",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "whatsapp-contact"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Whatsapp Contact",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/ashan/Downloads/48576776a522d9ad3d8d7d211b49b247ee519efe (2).png"
+                },
+                {
+                  "key": "title",
+                  "value": "Whatapp title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "desc",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/whatsapp-contact",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "whatsapp-contact"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Social Media",
+      "item": [
+        {
+          "name": "get social media by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/social-media/68aade02c84d84cbb0faf466",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "social-media", "68aade02c84d84cbb0faf466"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bulletin",
+      "item": [
+        {
+          "name": "Get all bulletin",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/bulletins?page=1&limit=10",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "bulletins"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Blogs",
+      "item": [
+        {
+          "name": "Get all bolgs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/blogs?page=1&limit=10",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "blogs"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Advertising",
+      "item": [
+        {
+          "name": "Get adversiting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}/api/v1/advertising",
+              "host": ["{{apiUrl}}"],
+              "path": ["api", "v1", "advertising"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "apiUrl",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
